@@ -14,44 +14,64 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">
+       
           <div class="header__logo">
             <img class="header__logo-img" src="img/logo.png" alt="logo">
           </div>
           <div class="header__text">
             <h1>characters</h1>
           </div>
-        </div>
+        
       </header>
       <div class="searchbox">
         <div class="searchbox__main">
-          <div class="searchbox__input">
-            <label for="search"
-              >Filter by name:
-              <input
-                class="searchbox__input-field"
-                type="text"
-                placeholder="Search for a character..."
-              />
-            </label>
+          <div class="searchbox-input-wrapper">
+            <div class="searchbox__input">
+                <input
+                  class="searchbox__input-field"
+                  type="text"
+                  name="search"
+                  placeholder="Search by name..."
+                />
+              </div>
+              <div class="searchbox__button">
+                <button class="searchbox__button-btn"></button>
+              </div>
           </div>
-          <div class="searchbox__button">
-            <button class="searchbox__button-btn btn">Search</button>
-          </div>
+          
+          
+
           <div class="searchbox__select-gender">
-            <label for="filter"
-              >Filter by gender:
-              <select class="select__options-gender" name="options">
+              <select class="select__options-gender" name="gender">
+                <option value="" disabled selected>Filter by gender</option>
                 <option value="female">female</option>
                 <option value="male">male</option>
                 <option value="genderless">genderless</option>
                 <option value="unknown">unknown</option>
               </select>
-            </label>
+            
           </div>
-          <div class="searchbox__filter-button">
-            <button class="filter__button-btn btn">Filter</button>
+
+          <div class="searchbox__select-species">
+              <select class="select__options-species" name="species">
+                <option value="" disabled selected>Filter by species</option>
+                <option value="human">human</option>
+                <option value="alien">alien</option>
+                <option value="robot">robot</option>
+                <option value="animal">animal</option>
+                <option value="humanoid">humanoid</option>
+                <option value="mythological creature">mythological creature</option>
+                <option value="disease">disease</option>
+                <option value="cronenberg">Cronenberg</option>
+                <option value="poopybutthole">Poopybutthole</option>
+                <option value="unknown">unknown</option>
+              </select>
           </div>
+       
+        <div class="searchbox__reset">
+          <button class="searchbox__reset-btn">Reset</button>
+          <img class="searchbox__reset-icon" src="img/reset.svg" alt="reset">
+        </div>
         </div>
       </div>
       <div class="container">
@@ -60,7 +80,7 @@
         </div>
         <div class="characters"></div>
         <div class="characters__button">
-          <button class="characters__button-btn btn">Load more</button>
+          <button class="characters__button-btn">Load more</button>
         </div>
       </div>
     </div>

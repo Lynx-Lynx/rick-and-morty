@@ -59,7 +59,7 @@ class DataLoader extends State {
     });
   }
   
-  filterCharacter(value) {
+  filterCharacterByGender(value) {
     this.emptyResultsContent();
     this.getCharacters(`https://rickandmortyapi.com/api/character/?gender=${value}`).then(character => {
       this.nextPage = character.info.next;
@@ -71,6 +71,22 @@ class DataLoader extends State {
     });
   }
 
+  filterCharacterBySpecies(value) {
+    this.emptyResultsContent();
+    this.getCharacters(`https://rickandmortyapi.com/api/character/?species=${value}`).then(character => {
+      this.nextPage = character.info.next;
+      NEXT.style.display='block';
+      if (!this.nextPage) {
+        NEXT.style.display='none';
+      }
+      createCharacterCard(character.results)
+    });
+  }
+
+  resetData() {
+    this.emptyResultsContent();
+    this.loadCharacters();
+  }
 };
 
 export default DataLoader;
