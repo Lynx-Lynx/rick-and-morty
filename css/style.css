@@ -300,10 +300,12 @@ select {
   .select__options-gender {
     padding: 12px;
     width: 145px;
+    background-color: transparent;
   }
   .select__options-species {
     padding: 12px;
     width: 150px;
+    background-color: transparent;
   }
   .searchbox__reset {
     display: flex;
