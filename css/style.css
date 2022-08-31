@@ -131,6 +131,9 @@ select {
   .searchbox__reset-icon:hover {
     animation: spin 2s linear infinite;
   }
+  .characters__card:hover {
+    transform: scale(1.05);
+  }
 }
 @-moz-keyframes spin {
   100% {
@@ -148,7 +151,6 @@ select {
     transform: rotate(360deg);
   }
 }
-
 /*---------------------cards--------------------*/
 .characters {
   display: grid;
@@ -158,11 +160,13 @@ select {
   margin: 20px;
 }
 .characters__card {
+  max-width: 340px;
   padding: 10px;
   background-color: #282a42;
   border-radius: 10px;
   color: #fff;
   box-shadow: 2px 3px 10px 2px #b1b1b1;
+  transition: all .2s ease-in-out;
 }
 .characters__card-img {
   padding: 10px;
