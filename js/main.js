@@ -37,6 +37,10 @@ function onSearch() {
   resetAllInputs();
 }
 
+function onEnterSearch(e) {
+  if (INPUT.value && e.key === 'Enter') onSearch();
+}
+
 function onReset() {
   creatures.resetData();
   resetAllInputs();
@@ -45,6 +49,7 @@ function onReset() {
 window.addEventListener('load', onWindowLoad)
 NEXT.addEventListener('click', onLoad)
 SEARCH.addEventListener('click', onSearch)
+INPUT.addEventListener('keypress', onEnterSearch)
 RESET.addEventListener('click', onReset)
 GENDER_SELECTOR.addEventListener('input', onGenderFilter)
 SPECIES_SELECTOR.addEventListener('input', onSpeciesFilter)

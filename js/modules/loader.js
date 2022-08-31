@@ -12,7 +12,12 @@ class DataLoader extends State {
       if (response.status >= 200 && response.status <= 299) {
         return response.json();
       } else {
-        ERROR_MESSAGE.style.display='block';
+        ERROR_MESSAGE.style.cssText=`
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        `;
         throw new Error('page not found');
       }  
     }
