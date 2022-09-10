@@ -25,5 +25,3 @@ function createCharacterCard(characters) {
 }
 
 export default createCharacterCard;
-
-//<p>Status: ${character.status}</p>
